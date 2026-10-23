@@ -76,7 +76,9 @@ export class Campus {
 
   public ListarProfessores(): void {
     this._professores.forEach((professor) => {
-      console.log(`${professor.getNome()} ${professor.getSobrenome()} ${professor.getMatricula()}`);
+      console.log(
+        `${professor.getNome()} ${professor.getSobrenome()} - matrícula ${professor.getMatricula()} - ${professor.descreverVinculo()}`,
+      );
     });
   }
 }
