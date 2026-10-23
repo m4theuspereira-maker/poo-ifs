@@ -84,6 +84,10 @@ export class Aluno extends Pessoa implements UsuarioBiblioteca {
     return this._matriculaAtiva;
   }
 
+  protected gerarMatricula(): number {
+    return Math.floor(Math.random() * 9000000) + 1000000;
+  }
+
   public descreverVinculo(): string {
     return `Aluno regular do curso ${this._curso} com situação de matrícula: ${this._situacaoMatricula}.`;
   }

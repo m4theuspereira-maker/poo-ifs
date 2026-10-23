@@ -60,7 +60,7 @@ export class VisitanteDiscente extends Aluno {
     this._periodoPermanencia = periodoPermanencia;
   }
 
-  protected gerarMatricula(): number {
+  protected override gerarMatricula(): number {
     return Math.floor(Math.random() * 90000) + 10000;
   }
 

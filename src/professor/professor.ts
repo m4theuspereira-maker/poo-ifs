@@ -70,6 +70,10 @@ export class Professor extends Pessoa implements UsuarioBiblioteca {
     return this._ativo;
   }
 
+  protected gerarMatricula(): number {
+    return Math.floor(Math.random() * 900000) + 100000;
+  }
+
   public descreverVinculo(): string {
     if (this._campus) {
       return `Professor regular vinculado ao campus ${this._campus.nome}.`;
